@@ -46,6 +46,10 @@ var actressIWantToDate =[
     "Emilia Clarke"
 ];
 
+actressIWantToDate.push("Elmita Baidhya");
+//actressIWantToDate.pop();
+console.log(actressIWantToDate);
+
 function printArray(arr){
     for(var i = 0; i < arr.length; i++){
 
@@ -56,13 +60,17 @@ function printArray(arr){
 
 //Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array(dont’ use method).
 function printArrayReverse(array){
+    var reversedArray = [];
     for(var i = array.length-1; i>0; i--){
 
-        console.log(array[i]);
+        reversedArray.push(array[i]); 
+        //console.log(array[i]);
+        //newarray[i] = array[arr.length-i-1];
     }
+    return reversedArray;
 
 }
-
+console.log(printArrayReverse(moviesToWatch));
 //Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array. 
 function printArrayCapital(arr){
     var capitalizedArray = [];
@@ -248,24 +256,23 @@ function displayDateTime(){
     return setDate;
 }
 
+// here match method takes regular expression REGEX 
 function findArrayElement (array){
+   // var foundItem = [ ];
 
-    var searchItem = array[i].match(/o/);
-    console.log(searchItem);
-    
-    for (i = 0; i < array.length; i++){
-        if (searchItem.includes(searchItem)){
-            console.log("includes");
-        }else{
-            console.log("doesnot include");
+    for (var i = 0; i < array.length; i++){
+        var searchItem = array[i].match(/o/gi)!= null && array[i].match(/o/gi).length;
+        //console.log(searchItem);
+        if (searchItem >= 1 ){
+            console.log(array[i]);
+            //foundItem.push(array[i]);
         }
-
-
     }
-
+    //return foundItem;
 }
 
-findArrayElement(actressIWantToDate);
+
+console.log(findArrayElement(actressIWantToDate));
 
 console.log(displayDateTime());
 console.log(displayDateTime());
