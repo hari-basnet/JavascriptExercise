@@ -10,7 +10,7 @@ const favouriteCars = [
     'Volvo v-40',
     'Tesla Model-S',
     'Toyota Prius',
-    'Land Cruiser'
+    'land Cruiser'
 ];
 
 console.log(Math.floor(favouriteCars.length)/2);
@@ -18,9 +18,7 @@ console.log(Math.floor(favouriteCars.length)/2);
 console.log(favouriteCars.length);
 
 // Get first item, the middle item and the last item of the array 
-
-
-var firstItem =  favouriteCars.splice(0,1);
+const firstItem = favouriteCars.slice(0,1);
 console.log(firstItem);
 
 //printing our the middle item is pain in the asss 
@@ -38,4 +36,28 @@ if (favouriteCars.length % 2 === 0){
     console.log(middleItemOdd);
 }
 
+//Declare an array called mixedDataTypes,put different 
+//data types and in your array and 
+//the array size should be greater than 5
 
+const mixedDataTypes = [1, "one", true, undefined, null, 222];
+
+//Sort the array using sort() method
+console.log(favouriteCars.sort());
+
+//Slice out the last 3 companies from the array
+
+let slicedOutArray = favouriteCars.slice(favouriteCars.length -3);
+console.log(slicedOutArray);
+
+console.log(favouriteCars);
+//Slice out the middle IT company or companies from the array
+
+let middleItem = favouriteCars.slice(Math.floor(favouriteCars.length / 2 -1) , Math.floor(favouriteCars.length/ 2 + 1));
+
+console.log(middleItem);
+
+
+// remove all items 
+favouriteCars.length =0;
+console.log(favouriteCars);

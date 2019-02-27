@@ -169,23 +169,52 @@ console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango","Jalebi"]));
 //Write a function called checkSeason, it takes a month parameter 
 //and returns the season:Autumn, Winter, Spring or Summer.
 function checkSeason(month){
-
-    // let Autumn = ["september", "october", "november"];
-    // let Winter = ["december", "january", "february"];
-    // let Spring = ["march", "april", "may"];
-    // let Summer = ["june", "july", "august"];
-
-    const myMonth = ["december", "january", "february",
-    "march", "april", "may","june", "july", "august",
-    "september", "october", "november"];
-
-    for(i = 0; i < myMonth.length; i ++){
-        if(myMonth[i].includes("december","january","february")){
-            
-        }
-        console.log(myMonth[i]);
+    let season;   
+    if(month.match(/[Dd]ecember/g) || month.match(/[Jj]anuary/) || month.match(/[Ff]ebruary/)){
+        season = "Winter";
+    }else if(month.match(/[Mm]arch/) || month.match(/[Aa]pril/g) || month.match(/[Mm]ay/)){
+        season = "Spring";
+    }else if(month.match(/[Jj]une/) || month.match(/[Jj]uly/g) || month.match(/[Aa]ugust/)){
+        season = "Summer";
+    }else if(month.match(/[Ss]eptember/) || month.match(/[Oo]ctober/g) || month.match(/[Nn]ovember/)){
+        season = "Autumn";
+    }else{
+        return "there is no such Month";
     }
-
-
+    return season;
 }
-checkSeason();
+console.log(checkSeason("August"));
+
+//another way of finding the season is switch 
+
+function chckSeason (month){
+
+    switch (month){
+        case 12 :
+        case 1 :
+        case 2 :
+        console.log("Winter");
+        break;
+        case 3 :
+        case 4 :
+        case 5 :
+        console.log("Spring");
+        break;
+        case 6 :
+        case 7 :
+        case 8 :
+        console.log("Summer");
+        break;
+        case 9 :
+        case 10 :
+        case 11 :
+        console.log("Fall");
+        break;
+
+        default:
+        console.log(alert("we only have twelve months"));
+    }
+}
+
+chckSeason(3);
+
