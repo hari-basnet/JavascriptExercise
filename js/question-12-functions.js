@@ -262,7 +262,8 @@ function findArrayElement (array){
 
     for (var i = 0; i < array.length; i++){
         var searchItem = array[i].match(/o/gi)!= null && array[i].match(/o/gi).length;
-        //console.log(searchItem);
+        //console.log(typeof searchItem);
+        
         if (searchItem >= 1 ){
             console.log(array[i]);
             //foundItem.push(array[i]);

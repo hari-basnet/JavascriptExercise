@@ -10,7 +10,7 @@ const favouriteCars = [
     'Volvo v-40',
     'Tesla Model-S',
     'Toyota Prius',
-    //'Land Cruiser'
+    'Land Cruiser'
 ];
 
 console.log(Math.floor(favouriteCars.length)/2);
@@ -20,19 +20,13 @@ console.log(favouriteCars.length);
 // Get first item, the middle item and the last item of the array 
 
 
-//var firstItem = favouriteCars[0];
-//var middleItem = favouriteCars[4];
-// console.log(firstItem);
-// console.log(favouriteCars[0]);
+var firstItem =  favouriteCars.splice(0,1);
+console.log(firstItem);
 
-// var firstItem =  favouriteCars.splice(0,1);
-// console.log(firstItem);
-console.log(Math.ceil((favouriteCars.length + 1)/2));
-
-
+//printing our the middle item is pain in the asss 
 var middleItemEven = favouriteCars.slice(
-    Math.floor((favouriteCars.length -1) / 2),
-    Math.ceil((favouriteCars.length +1) / 2));
+                Math.floor((favouriteCars.length -1) / 2),
+                Math.ceil((favouriteCars.length +1) / 2));
 
 var middleItemOdd = favouriteCars.slice(
     Math.floor(favouriteCars.length)/2,
@@ -43,4 +37,5 @@ if (favouriteCars.length % 2 === 0){
 }else{
     console.log(middleItemOdd);
 }
+
 
