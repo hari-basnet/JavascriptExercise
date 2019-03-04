@@ -52,3 +52,8 @@ for(var i = 0; i<itCompanies.length; i++){
 }
 
 console.log(itCompanies);
+
+
+var myLongString = "In 2019 the WHO declared that vaccine hesitancy is one of the top 10 threats to global health. Our vaccine promotion application will integrate with the Finnish electronic health record system and automatically remind users about vaccines and boosters they should be getting. It will also include the ability to print the records for international travel, information about the disease prevented with each vaccine, and minigames to educate users about important concepts such as herd immunity."
+
+console.log(myLongString.length);

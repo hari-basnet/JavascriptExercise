@@ -218,3 +218,66 @@ function chckSeason (month){
 
 chckSeason(3);
 
+//(42) Write a function called *isPrime, which checks if a number is prime number.
+
+function isPrime(number){
+
+    for (let i = 2; i < number; i ++ ){
+        if(number % i === 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log("checkPrime?", isPrime(0));
+
+// (45) Write a functions which checks if all items are unique in the array.
+
+const newArray = ["A", "B", "C", "D", "E", "A"];
+function checkUniqueItem (array){
+
+    for (let i = 0; i < array.length; i++){
+
+        if (array.indexOf(array[i]) !== -1){
+            return true;
+
+        }
+    }
+    return false;
+
+}
+console.log("check for Unique items: ", checkUniqueItem(newArray));
+
+function hasDuplicates(array) {
+    var valuesSoFar = [];
+    for (var i = 0; i < array.length; ++i) {
+        var value = array[i];
+        if (valuesSoFar.indexOf(value) !== -1) {
+            return true;
+        }
+        valuesSoFar.push(value);
+    }
+    return false;
+}
+
+console.log("check for Unique items: ", hasDuplicates(newArray));
+
+
+// (PRACTICE)
+
+
+function reverseTheArray (array){
+
+    let reversedNew = [];
+    for (let i = array.length - 1; i >= 0; i--){
+
+        reversedNew.push(array[i]);
+        
+    }
+    return reversedNew;
+
+}
+
+console.log(reverseTheArray(newArray));
+

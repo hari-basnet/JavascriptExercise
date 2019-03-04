@@ -58,3 +58,80 @@ console.log(newCompanyOne.concat(newCompanyTwo)); //question
 
 //Use repeat() method to print Integrify Academy 5 times
 console.log(company.repeat(5));
+
+
+//Use substr to slice out the phase because because because in the following sentence:
+//'You cannot end a sentence with because because because is a conjunction'
+
+let sentence = 'You cannot end a sentence with because because because is a conjunction';
+
+let firstPosition = sentence.indexOf('because');
+let lastPosition = sentence.lastIndexOf('because')+ 'because'.length + 1;
+
+
+console.log(sentence.substring(firstPosition,lastPosition));
+console.log(sentence.lastIndexOf('because') + 'because'.length + 1);
+
+
+//29//Calculate the total annual income of the person by extract the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
+const incomes = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'.split(' ');
+const numbers = [];
+for (let i = 0; i < incomes.length; i++) {
+
+  if(parseFloat(incomes[i])){
+    numbers.push(parseFloat(incomes[i]));
+  }  
+}
+console.log(numbers);
+console.log(numbers.length);
+var annualIncome = 0;
+for(let i = 0; i < numbers.length; i++){
+
+  if(numbers[i] === 5000){
+    annualIncome += numbers[i] * 12;
+  }else if(numbers[i] === 10000){
+    annualIncome += 10000;
+  }else if (numbers[i] === 15000){
+    annualIncome += numbers[i] * 12;
+  }else{
+    
+    annualIncome += numbers[i];
+    
+  }
+}
+
+console.log(annualIncome);
+
+const sentences = 
+
+'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+
+const pattern = /\d+/g;
+
+const amounts = sentences.match(pattern);
+
+console.log(amounts);
+
+let hashes = " ";
+for(let i = 0; i < 7; i++){
+  console.log(hashes += "#");
+}
+
+
+//Use search to find the position of the first occurrence of the word because in the following sentence:
+//'You cannot end a sentence with because because because is a conjunction'
+
+const myString = 'You cannot end a sentence with because because because is a conjunction';
+
+console.log(myString.search(/[Bb]ecause/g));
+
+function songDecoder(song){
+
+  const pattern = /WUB/g;
+  const wubFinder = song.split(pattern);44
+  return wubFinder;
+
+}
+
+console.log(songDecoder("WUBKDKDWUBDKKDKWUBKDKDKDKWUB"));

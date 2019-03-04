@@ -214,7 +214,7 @@ function printFactorial(number){
 //Call your function isEmpty, it takes a parameter and it checks if it is empty or not.
 function isEmpty(checkString){
 
-    if (checkString == "" ||checkString==null){
+    if (checkString === null || checkString === undefined){
         console.log("The string is Empty");
     }else{
         console.log("The string is not Empty");
@@ -272,7 +272,15 @@ function findArrayElement (array){
     //return foundItem;
 }
 
-
+function addItemT (arrayToAdd){
+    
+    arrayToAdd = arrayToAdd.push("GORETO");
+    return arrayToAdd;
+ }
+ 
+ console.log(addItemT(moviesToWatch));
+ 
+console.log(moviesToWatch);
 console.log(findArrayElement(actressIWantToDate));
 
 console.log(displayDateTime());
@@ -310,3 +318,4 @@ console.log("=============================");
 isEmpty(moviesToWatch);
 
 console.log(sum([10,10,10,10,10,10,10,10,10,10,23]));
+
